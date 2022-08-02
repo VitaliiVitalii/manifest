@@ -1,0 +1,20 @@
+
+@use '../variables/variables' as *;
+@use '../mixins/media' as *;
+
+.header {
+  &__container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    justify-content: space-between;
+    align-items: center;
+    
+      @include media($lg) {
+        padding-top: 40px;
+        padding-bottom: 40px;
+
+    }
+
+  }
+
+}

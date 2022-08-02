@@ -1,0 +1,98 @@
+@use '../variables/variables' as *;
+@use '../mixins/media' as *;
+
+.main {
+    
+    &__content {
+        padding: 70px 0 70px 0;
+
+        @include media($lg) {
+            padding: 90px 0 90px 0;
+
+        }
+
+    }
+
+    &__title {
+        font-weight: 400;
+        font-size: 48px;
+        line-height: 64px;
+        letter-spacing: 0.05em;
+        color: $black-default;
+        text-align: center;
+        margin: 0 0 50px 0;
+
+        @include media($md) {
+            text-align: left;
+            
+        }
+    
+    }
+
+    &__subtitle {
+        margin: 70px 0 30px;
+
+        @include media($md) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 35px 0 30px;
+        
+        }
+
+    }
+    
+    &__subtitle-head {
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 36px;
+        letter-spacing: 0.05em;
+        color: $black-default;
+        padding: 0 0 10px;
+
+            @include media($md) {
+                line-height: 166%;               
+                letter-spacing: 0.1em;
+
+            }
+
+    }
+
+    &__subtitle-head-expanse {
+        font-family: $font-primary;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 166%;
+        letter-spacing: 0.1em;
+        color: $secondary;
+        position: relative;
+        margin: 0 40px 0 0;
+
+        &:after {
+            content: '';
+            background-image: url(../img/arrow.png);
+            background-repeat: no-repeat;
+            position: absolute;
+            width: 23px;
+            height: 12px;
+            bottom: 4px;
+            right: -42px;
+
+        }
+
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,45 @@
+@use '../variables/variables' as *;
+@use '../mixins/media' as *;
+
+
+.nav__burger {
+    display: block;
+    position: relative;
+    width: 34px;
+    height: 20px;
+
+    @include media($lg) {
+        display: none;
+
+    }
+
+
+    &::before,
+    &::after {
+        content: '';
+        background-color: $black-default;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        right: 0;
+    }
+
+    & span {
+        position: absolute;
+        right: 0;
+        background-color: $black-default;
+        width: 100%;
+        height: 2px;
+        top: 9px;
+
+    }
+
+    &::before {
+        top: 0;
+    }
+    &::after {
+        bottom: 0;
+    }
+
+}
+

@@ -1,0 +1,53 @@
+@use '../variables/variables' as *;
+@use '../mixins/media' as *;
+
+.banner {
+
+    &__hero {
+        background-image: url("../img/banner/bg-SM.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 500px;
+        padding-top: 70px;
+        color: $black-default;
+
+        @include media($md) {
+            background-image: url("../img/banner/bg-MD.jpg");
+            height: 320px;
+            padding-top: 30px;
+            
+        }
+    
+        @include media($lg) {
+            background-image: url("../img/banner/bg-LG.jpg");
+            min-height: 600px;
+            padding-top: 100px;
+            height: 41vw;
+
+        }
+
+        &-description {
+            font-weight: 600;
+            font-size: 30px;
+            line-height: 50px;
+            letter-spacing: 0.05em;
+
+            @include media($md) {
+                font-size: 36px;
+                width: 645px;
+
+            }
+
+            @include media($lg) {
+                font-size: 48px;
+                line-height: 64px;
+                width: 770px;
+
+            }
+
+        }
+    }
+
+    
+
+}

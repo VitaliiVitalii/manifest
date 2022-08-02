@@ -1,0 +1,99 @@
+@use '../variables/variables' as *;
+@use '../mixins/media' as *;
+
+.nav {
+
+    @include media($lg) {
+        margin-left: auto;
+    }
+
+    &__list {
+        display: none;
+
+        .nav__list--open & {
+
+            display: block;
+
+    }
+
+        @include media($lg) {
+            display: flex;
+            gap: 40px;
+            font-size: 0.9rem;
+            
+        }
+
+    }
+
+    &__link {
+        @include media($lg) {
+        text-transform: uppercase;
+        color: $black-default;
+        text-decoration: none;
+        font-family: $font-primary;
+        letter-spacing: 3px;
+        font-weight: 600;
+        position: relative;
+        padding-bottom: 5px;
+        transition: all 0.5s ease-in-out;
+
+        &:after {
+            content: '';
+            width: 80%;
+            position: absolute;
+            height: 2px;
+            background-color: $black-default;
+            transform: translateX(-50%);
+            left: 50%;
+            visibility: hidden;
+            bottom: 0;
+            transition: all 0.5s ease-in-out;
+
+        }
+
+        &:hover {
+            &:after {
+                visibility: visible;
+
+            }
+
+        }
+
+    }
+        
+}
+
+    &__btn {
+        cursor: pointer;
+
+        @include media($lg) {
+            display: none;
+
+        }
+
+    }
+
+}
+
+.nav__list--open {
+
+    .nav {
+        @include media($sm) {
+            display: flex;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #efe9e0;
+            z-index: 2;
+            transition: all 0.1s linear;
+
+        }
+
+    }
+
+}
+
+
+

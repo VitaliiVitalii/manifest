@@ -1,0 +1,397 @@
+@use '../variables/variables' as *;
+@use '../mixins/media' as *;
+
+.column {
+
+    &__img_first {
+        display: block;
+        background: url(../img/sm_img/column_lamp.jpg) no-repeat;
+        height: 210px;
+        background-size: cover;
+        width: 100%;
+
+    }
+
+    &__img_second {
+        display: block;
+        background: url(../img/sm_img/column_arrow.jpg) 0 0 no-repeat;
+        height: 210px;
+        background-size: cover;
+        width: 100%;
+
+    }
+
+    &__img_third {
+        display: block;
+        background: url(../img/sm_img/column_roof.jpg) 0 0 no-repeat;
+        height: 210px;
+        background-size: cover;
+        width: 100%;
+
+    }
+
+    &__items-title {
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 166%;
+        letter-spacing: 0.1em;
+        color: $black-default;
+        padding: 0 0 18px;
+
+    }
+
+    &__items-text {
+        font-family: $font-primary;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 166%;
+        letter-spacing: 0.05em;
+        color: $primary;
+        padding: 0 0 50px;
+
+    }
+
+    &__subtitle {
+        display: flex;
+        justify-content: space-between;
+        padding: 25px 0 25px 0;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 166%;
+        letter-spacing: 0.09em;
+
+    }
+
+    &__items-title {
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 166%;
+        letter-spacing: 0.1em;
+        color: $black-default;
+        padding: 0 0 20px;
+
+    }
+
+    &__items-text {
+        font-family: $font-primary;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 166%;
+        letter-spacing: 0.06em;
+        color: $primary;
+        padding: 0 0 50px;
+
+    }
+
+    &__last-img {
+
+        &_first {
+            display: block;
+            background: url(../img/sm_img/column_mid-lamp.jpg) 0 0 no-repeat;
+            background-size: cover;
+            height: 150px;
+            width: 100%;
+    
+        }
+
+        &_second {
+            display: block;
+            background: url(../img/sm_img/column_mid-arrow.jpg) 0 0 no-repeat;
+            background-size: cover;
+            height: 150px;
+            width: 100%;
+    
+        }
+
+    }
+
+}
+
+
+@include media($md) {
+
+    .column {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 0 20px 0;
+
+        &__img {
+                width: calc(50% - 10px);
+
+            &_first {
+                display: inline-block;
+                background: url(../img/md_img/column_lamp_md.jpg) 0 0 no-repeat;
+                background-size: cover;
+                height: 240px;
+                width: 100%;
+
+            }
+
+            &_second {
+                background: url(../img/md_img/column_arrow_md.jpg);
+                background-repeat: no-repeat;
+                height: 240px;
+                background-size: cover;
+                width: 100%;
+
+            }
+
+            &_third {
+                background: url(../img/md_img/column_roof_md.jpg) 0 0 no-repeat;
+                height: 240px;
+                background-size: cover;
+                height: 240px;
+                width: 100%;
+
+            }
+
+        }
+
+        &__items-title {
+            font-weight: 500;
+            font-size: 22px;
+            line-height: 166%;
+            letter-spacing: 0.1em;
+            color: $black-default;
+            padding: 10px 0 15px;
+
+        }
+
+        &__subtitle {
+            font-family: $font-primary;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 166%;
+            letter-spacing: 0.1em;
+            padding: 0 0 25px 0;
+
+        }
+
+        &__wrapper {
+            width: 50%;
+
+        }
+
+        &__last-img {
+    
+            &_first {
+                display: block;
+                background: url(../img/md_img/column_mid-lamp_md.jpg) 0 0 no-repeat;
+                background-size: cover;
+                height: 160px;
+                width: 100%;
+    
+            }
+
+            &_second {
+                display: block;
+                background: url(../img/md_img/column_mid-arrow_md.jpg) 0 0 no-repeat;
+                background-size: cover;
+                height: 160px;
+                width: 100%;
+    
+            }
+
+        }
+
+    }
+
+}
+
+@include media($lg) {
+    .column {
+        display: block;
+
+        &__img {
+
+
+            &_first {
+                background: url(../img/lg_img/column_lamp_lg.jpg) 0 0 no-repeat;
+                height: 260px;
+                background-size: cover;
+                width: 370px;
+                margin-bottom: 25px;
+
+
+            }
+
+            &_second {
+                background: url(../img/lg_img/column_arrow_lg.jpg) 0 0 no-repeat;
+                height: 260px;
+                background-size: cover;
+                width: 370px;
+                margin-bottom: 25px;
+
+            }
+
+            &_third {
+                background: url(../img/lg_img/column_roof_lg.jpg) 0 0 no-repeat;
+                height: 260px;
+                background-size: cover;
+                width: 370px;
+                margin-bottom: 25px;
+
+            }
+
+        }
+
+        &__last-img {
+
+            &_first {
+                display: block;
+                background: url(../img/lg_img/column_mid-lamp_lg.jpg) 0 0 no-repeat;
+                background-size: cover;
+                height: 260px;
+                width: 570px;
+
+            }
+
+            &_second {
+                display: block;
+                background: url(../img/lg_img/column_mid-arrow_lg.jpg) 0 0 no-repeat;
+                background-size: cover;
+                height: 260px;
+                width: 570px;
+
+            }
+
+        }
+
+        &__subtitle {
+            padding: 5px 0 15px 0;
+
+        }
+
+        &__wrapper {
+            width: 370px;
+
+        }
+
+    }
+
+    .content-box {
+        display: flex;
+        justify-content: space-between;
+        
+    }
+
+}
+
+.pad {
+    padding: 0 0 0 0;
+
+}
+
+.column-pad {
+    padding: 20px 0 10px 0;
+
+}
+
+.column-sub-pad {
+    @include media($sm) {
+        padding: 20px 0 5px 0;
+        
+    }
+    @include media($md) {
+        padding: 25px 0 20px 0;
+    
+    }
+    @include media($lg) {
+        padding: 40px 0 5px 0;
+    
+    }
+
+}
+
+.title-set {
+    width: 297px;
+    padding: 0 0 15px 0;
+    @include media($md) {
+        width: 350px;
+        padding: 0 0 15px 0;
+    }
+
+    @include media($lg) {
+        width: 570px;
+        padding: 10px 0 15px 0;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 166%;
+        letter-spacing: 0.1em;
+
+    }
+
+}
+
+.first-sbt {
+    @include media($md) {
+        padding: 45px 0 10px 0;
+    
+    }
+
+    @include media($lg) {
+        padding: 0 0 10px 0;
+    
+    }
+
+}
+
+.second-sbt {
+    @include media($sm) {
+        padding: 12px 0 35px 0;
+    
+    }
+
+    @include media($md) {
+        padding: 12px 0 16px 0;
+    
+    }
+
+}
+
+.invis {
+    @include media($md) {
+        visibility: hidden;
+
+    }
+
+}
+
+.column-normalize {
+    @include media($lg) {
+        display: block;    
+    
+    }
+
+}
+
+.subtitle-mid-pad {
+    @include media($lg) {
+        padding: 5px 0 10px 0;   
+    
+    }
+
+}
+
+.wrapper-width {
+    @include media($lg) {
+        width: 570px;   
+    
+    }
+
+}
+
+.adapt {
+    @include media($md) {
+        width: calc(100% - 10px);
+        padding: 0px 0 35px 0;
+
+    }
+
+    @include media($lg) {
+        width: calc(100% - 10px);
+        padding: 0 0 0 0;
+
+    }
+
+}

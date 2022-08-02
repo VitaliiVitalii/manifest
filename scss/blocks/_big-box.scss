@@ -1,0 +1,366 @@
+@use '../variables/variables' as *;
+@use '../mixins/media' as *;
+
+.content {
+
+    &__big-box {
+
+        &-subtitle {
+            font-family: $font-primary;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 166%;
+            letter-spacing: 0.1em;
+            color: $secondary;
+
+        }
+
+        &-title {
+            font-weight: 500;
+            font-size: 22px;
+            line-height: 166%;
+            color: $black-default;
+            padding-top: 30px;
+            padding-bottom: 10px;
+            letter-spacing: 0.1em;
+
+            @include media($md) {
+                padding-top: 20px;
+                font-size: 23px;
+
+            }
+
+        }
+
+        &-text-first {
+            font-family: $font-primary;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 166%;
+            letter-spacing: 0.05em;
+            color: $primary;
+            padding-top: 40px;
+            letter-spacing: 0.06em;
+
+            @include media($md) {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                height: 115px;
+                
+                
+                    &:after {
+                        content: '';
+                        background-image: url(../img/arrow.png);
+                        background-repeat: no-repeat;
+                        position: absolute;
+                        width: 23px;
+                        height: 12px;
+                        bottom: 0;
+                        right: 60px;
+                        cursor: pointer;
+                    
+                    }
+
+            }
+
+            @include media($lg) {
+                padding-top: 50px;
+                overflow: hidden;
+                height: 135px;
+                width: 500px;
+                position: relative;
+                text-overflow: ellipsis;
+            
+                &:after {
+                    content: '';
+                    background-image: url(../img/arrow.png);
+                    background-repeat: no-repeat;
+                    position: absolute;
+                    width: 23px;
+                    height: 12px;
+                    bottom: 10px;
+                    left: 190px;
+                    cursor: pointer;
+                
+                }
+
+            }
+
+        }
+
+        &-text-second {
+            font-family: $font-primary;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 166%;
+            letter-spacing: 0.05em;
+            color: $primary;
+            padding-top: 40px;
+            letter-spacing: 0.06em;
+
+            @include media($md) {
+                position: relative;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                height: 115px;
+                
+                    &:after {
+                        content: '';
+                        background-image: url(../img/arrow.png);
+                        background-repeat: no-repeat;
+                        position: absolute;
+                        width: 23px;
+                        height: 12px;
+                        bottom: 0;
+                        right: 20px;
+                        cursor: pointer;
+
+                    }
+
+            }
+
+            @include media($lg) {
+                position: relative;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                height: 120px;
+                width: 460px;
+                padding: 45px 0 0 0;
+
+                    &:after {
+                        content: '';
+                        background-image: url(../img/arrow.png);
+                        background-repeat: no-repeat;
+                        position: absolute;
+                        width: 23px;
+                        height: 12px;
+                        bottom: 0;
+                        left: 185px;
+                        cursor: pointer;
+                
+                    }
+
+            }
+
+        }
+
+        @include media($md) {
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+    }
+
+    &__wrapper {
+        padding: 0 0 35px 0;
+        width: 100%;
+        max-width: $sm-max;
+
+        @include media($md) {
+            width: calc(50% - 10px);
+            max-width: $md-max;
+
+        }
+
+        @include media($lg) {
+            margin-right: auto;
+            padding: 85px 0 0 0;
+
+
+        }
+
+    }
+
+    &__last-box {
+        @include media($md) {
+            display: flex;
+            padding-bottom: 0;
+            justify-content: space-between;
+            margin: 0 0 -35px 0;
+
+        }
+
+        @include media($lg) {
+            display: flex;
+            padding-bottom: 20px;
+            
+
+        }
+
+    }
+
+    &__desc {
+        font-weight: 400;
+            @include media($lg) {
+                display: flex;
+                justify-content: space-between;
+                align-items: baseline;
+                
+            
+            }
+
+            &-box {
+                @include media($lg) {
+                    width: 470px;
+                    margin: 75px 0 0 0;
+                
+                }
+                
+            }
+            
+            &-title {
+            position: relative;
+            font-family: $font-secondary;
+            font-size: 24px;
+            line-height: 166%;
+            letter-spacing: 0.1em;
+            color: $black-default;
+            padding: 70px 0 50px 0;
+
+            
+            &:after {
+                content: '';
+                background-image: url(../img/arrow.png);
+                background-repeat: no-repeat;
+                position: absolute;
+                width: 23px;
+                height: 12px;
+                bottom: 30px;
+                left: 2px;
+                cursor: pointer;
+                
+            }
+            
+            @include media($md) {
+                width: 400px;
+                letter-spacing: 0.08em;
+            
+            }
+            
+            @include media($lg) {
+                padding: 0 0 0 0;
+                
+            }
+
+        }
+        
+        &-text {
+            font-family: $font-primary;
+            font-size: 18px;
+            line-height: 32px;
+            letter-spacing: 0.05em;
+            color: $primary;
+
+            @include media($md) {
+                width: 100%;
+                letter-spacing: 0.08em;
+                text-align: end;
+                padding: 20px 0 0 0;
+            
+            }
+
+            @include media($lg) {
+                text-align: start;
+            
+            }
+            
+        }
+
+    }
+
+}
+
+.big-box__img {
+
+    &-first {
+        background: url(../img/sm_img/big_box_arrow.jpg) 0 0 no-repeat;
+        background-size: cover;
+        height: 250px;
+        margin-bottom: 55px;
+
+        @include media($md) {
+            background: url(../img/md_img/big_box_arrow_md.jpg) 0 0 no-repeat;
+            background-size: cover;
+            height: 280px;
+            width: calc(50% - 10px);
+
+        }
+
+        @include media($lg) {
+            background: url(../img/lg_img/big_box_arrow_lg.jpg) 0 0 no-repeat;
+            height: 470px;
+            width: 570px;
+
+        }
+
+    }
+
+    &-second {
+        background: url(../img/sm_img/big_box_house.jpg) 0 0 no-repeat;
+        background-size: cover;
+        height: 250px;
+
+        @include media($md) {
+            background: url(../img/md_img/big_box_house_md.jpg) 0 0 no-repeat;
+            background-size: cover;
+            height: 280px;
+            width: calc(50% - 10px);
+
+        }
+
+        @include media($lg) {
+            background: url(../img/lg_img/big_box_house_lg.jpg) 0 0 no-repeat;
+            height: 470px;
+            width: 570px;
+
+        }
+
+    }
+
+}
+
+
+.box_reverse {
+    flex-direction: row-reverse;
+
+    @include media($lg) {
+        gap: 30px;
+
+    }
+
+}
+
+.text-pad {
+    padding: 0 0 10px 0;
+    @include media($sm) {
+        padding: 0 0 20px 0;
+    
+    }
+
+}
+
+.text-width {
+    @include media($md) {
+        width: 450px;
+
+    }
+
+}
+
+.text-position {
+    @include media($lg) {
+        margin-left: auto;
+    
+    }
+
+}
+
+.box-gap {
+    @include media($lg) {
+        gap: 20px;
+        padding: 0 0 50px 0;
+
+    }
+
+}

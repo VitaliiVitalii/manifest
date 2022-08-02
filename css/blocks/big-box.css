@@ -1,0 +1,147 @@
+/**********  Fonts  **********/
+/********* Colors ***********/
+/********  Widths ***********/
+/********  Breakpoints ******/
+/***** Padding ******/
+.content__big-box-subtitle {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 166%;
+  letter-spacing: 0.1em;
+  color: #7b7b7b;
+}
+.content__big-box-title {
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 166%;
+  color: #000000;
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+@media screen and (min-width: 768px) {
+  .content__big-box-title {
+    padding-bottom: 15px;
+  }
+}
+.content__big-box-text {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 166%;
+  letter-spacing: 0.05em;
+  color: #565656;
+  padding-top: 35px;
+}
+@media screen and (min-width: 768px) {
+  .content__big-box-text {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .content__big-box-text {
+    padding-top: 50px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .content__big-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+.content__wrapper {
+  padding: 0 0 35px 0;
+  width: 100%;
+  max-width: 767px;
+}
+@media screen and (min-width: 768px) {
+  .content__wrapper {
+    width: 340px;
+    max-width: 1439px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .content__wrapper {
+    margin: 0 auto;
+    width: 450px;
+    max-width: 1440px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .content__last-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+.content__desc {
+  font-weight: 400;
+}
+.content__desc-title {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 24px;
+  line-height: 166%;
+  letter-spacing: 0.1em;
+  color: #000000;
+}
+.content__desc-text {
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+  line-height: 32px;
+  letter-spacing: 0.05em;
+  color: #565656;
+}
+
+.big-box__img-first {
+  background: url(../img/sm_img/big_box_arrow.jpg) 0 0 no-repeat;
+  background-size: cover;
+  height: 250px;
+}
+@media screen and (min-width: 768px) {
+  .big-box__img-first {
+    background: url(../img/md_img/big_box_arrow_md.jpg) 0 0 no-repeat;
+    height: 280px;
+    width: 340px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .big-box__img-first {
+    background: url(../img/lg_img/big_box_arrow_lg.jpg) 0 0 no-repeat;
+    height: 470px;
+    width: 570px;
+  }
+}
+.big-box__img-second {
+  background: url(../img/sm_img/big_box_house.jpg) 0 0 no-repeat;
+  background-size: cover;
+  height: 250px;
+}
+@media screen and (min-width: 768px) {
+  .big-box__img-second {
+    background: url(../img/md_img/big_box_house_md.jpg) 0 0 no-repeat;
+    height: 280px;
+    width: 340px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .big-box__img-second {
+    background: url(../img/lg_img/big_box_house_lg.jpg) 0 0 no-repeat;
+    height: 470px;
+    width: 570px;
+  }
+}
+
+.box_reverse {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+/*# sourceMappingURL=big-box.css.map */

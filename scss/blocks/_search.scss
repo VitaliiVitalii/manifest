@@ -1,0 +1,29 @@
+@use '../variables/variables' as *;
+@use '../mixins/media' as *;
+
+.search {
+    margin-left: auto;
+    margin-right: 20px;
+
+    @include media($md){
+        margin-right: 40px;
+
+    }
+
+    @include media($lg){
+        order: 1;
+        margin-left: 80px;
+        margin-right: 0px;
+
+    }
+
+    &__btn {
+        &-icon {
+            width: 20px;
+            height: 20px;
+
+        }
+
+    }
+
+}
